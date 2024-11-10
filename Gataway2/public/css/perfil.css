@@ -1,0 +1,104 @@
+/* Centraliza o body e html para alinhar a .container no centro da página */
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    width: 400px; /* Ajuste o tamanho conforme necessário */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ff0000; /* Cor de fundo ajustada */
+}
+
+/* Estiliza o título e alinha ao centro */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Para ocupar toda a largura do container */
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    text-align: center; /* Alinha o label ao centro */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center; /* Alinha o texto dentro do campo ao centro */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #4a3aff;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #4a3aff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #3732b8;
+}
+
+/* Estilo para mensagens de erro */
+p {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center; /* Alinha a mensagem ao centro */
+}
+
+/* Estilos de responsividade */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 55px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
